@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="WpfAppTest.UserControlDelNalog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfAppTest"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="56,10,0,0" Text="Nov delovni nalog" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="56,42,0,0" Text="Naslov" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.219,0.535"/>
+        <TextBox Text="{Binding Naslov}" HorizontalAlignment="Left" Margin="56,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="NaslovTB" TextChanged="TextBox_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="196,40,0,0" Text="Število kosov" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding StKosov}" HorizontalAlignment="Left" Margin="196,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="NumberValidationTextBox" Name="StKosovTB"/>
+        <Button Content="Naprej" HorizontalAlignment="Left" Margin="372,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.353,-0.148" Click="Button_Click_Next" Name="NextToKosiBTN"/>
+        <ScrollViewer Margin="0,86,0,0" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <WrapPanel Name="KosiViewer" />
+        </ScrollViewer> 
+        <Button Content="Shrani" HorizontalAlignment="Left" Margin="444,61,0,0" VerticalAlignment="Top" Click="Button_Click_Save"/>
+        <TextBlock Name="PrintKosiText" HorizontalAlignment="Left" Margin="498,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+    </Grid>
+</UserControl>
