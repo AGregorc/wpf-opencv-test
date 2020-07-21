@@ -11,7 +11,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="56,42,0,0" Text="Naslov" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.219,0.535"/>
         <TextBox Text="{Binding Naslov}" HorizontalAlignment="Left" Margin="56,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="NaslovTB" TextChanged="TextBox_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="196,40,0,0" Text="Število kosov" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox Text="{Binding StKosov}" HorizontalAlignment="Left" Margin="196,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="NumberValidationTextBox" Name="StKosovTB"/>
+        <TextBox Text="{Binding StKosov}" HorizontalAlignment="Left" Margin="196,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="NumberValidationTextBox" Name="StKosovTB" TextChanged="StKosovTB_TextChanged"/>
         <Button Content="Naprej" HorizontalAlignment="Left" Margin="372,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.353,-0.148" Click="Button_Click_Next" Name="NextToKosiBTN"/>
         <ScrollViewer Margin="0,86,0,0" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
             <WrapPanel Name="KosiViewer" />

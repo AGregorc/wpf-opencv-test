@@ -7,24 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
-    <Window.DataContext>
-        <local:MainWindowViewModel />
-    </Window.DataContext>
-
-    <Window.Resources>
-        <DataTemplate x:Key="ViewDelNalog" DataType="{x:Type local:MainWindowViewModel}">
-            <local:UserControlDelNalog />
-        </DataTemplate>
-        <DataTemplate x:Key="ViewKos" DataType="{x:Type local:MainWindowViewModel}">
-            <local:UserControlKos />
-        </DataTemplate>
-
-
-    </Window.Resources>
-
     <Grid>
-        <ContentControl Content="{Binding }">
-            <ContentControl.Style>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Content="SQL test" Grid.Row="0" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Top" Click="Button_Click_Sql"/>
+        <Button Content="OpenCV test" HorizontalAlignment="Left" Margin="140,0,0,0" VerticalAlignment="Top" Click="Button_Click_OpenCV"/>
+        <ContentControl Grid.Row="1" Content="{Binding CurrentView}">
+            <!--<ContentControl.Style>
                 <Style TargetType="{x:Type ContentControl}">
                     <Setter Property="ContentTemplate" Value="{StaticResource ViewDelNalog}" />
                     <Style.Triggers>
@@ -33,7 +25,7 @@
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
-            </ContentControl.Style>
+            </ContentControl.Style>-->
         </ContentControl>
     </Grid>
 </Window>

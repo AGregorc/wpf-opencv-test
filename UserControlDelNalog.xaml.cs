@@ -81,5 +81,10 @@ namespace WpfAppTest
             this.DataContext = delovniNalog;
             KosiViewer.Children.Clear();
         }
+
+        private void StKosovTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
